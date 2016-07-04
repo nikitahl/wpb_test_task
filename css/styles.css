@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+html,
+button {
+  font: 10px 'Montserrat', Arial, sans-serif;
+}
+body {
+  height: 2500px;
+  /* for parallax demo purpose */
+  margin: 0;
+  padding: 0;
+  font-size: 1.4rem;
+  background: #393a3f;
+}
+/* Transitions */
+.container {
+  margin: 0 auto;
+}
+.hero-section {
+  position: relative;
+  top: 50px;
+  padding: 30px 0;
+}
+.hero-section .container {
+  width: 90%;
+}
+.hero-section__content-wrap {
+  position: relative;
+  width: 90%;
+  height: 400px;
+  margin: 0 auto;
+  background: rgba(53, 80, 140, 0.68);
+  color: #fff;
+  text-align: center;
+}
+.hero-section__content-wrap:hover .hero-section__cta-btn {
+  opacity: 1;
+}
+.hero-section__content-wrap:hover .hero-section__content {
+  top: 102px;
+}
+.hero-section__content {
+  position: absolute;
+  top: 122px;
+  right: 0;
+  left: 0;
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
+}
+.hero-section__heading {
+  position: relative;
+  margin: 0 0 40px;
+  font-size: 3rem;
+  font-weight: 400;
+}
+.hero-section__heading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -23px;
+  width: 30px;
+  height: 2px;
+  margin-left: -15px;
+  background: #fcd434;
+}
+.hero-section__description {
+  width: 590px;
+  margin: 0 auto;
+  line-height: 2.5rem;
+}
+.hero-section__cta-btn {
+  margin: 29px 0 0;
+  padding: 13px 24px;
+  border: 2px solid #fff;
+  outline: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, background 0.5s, border-color 0.5s;
+  transition: opacity 0.3s, background 0.5s, border-color 0.5s;
+}
+.hero-section__cta-btn:hover {
+  background: #fcd434;
+  border-color: #fcd434;
+}
+@media (max-width: 768px) {
+  .hero-section {
+    top: 50px;
+  }
+  .hero-section__content-wrap:hover .hero-section__content {
+    top: 55px;
+  }
+  .hero-section__content {
+    top: 70px;
+    padding: 0 20px;
+  }
+  .hero-section__description {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) and (orientation: portrait) {
+  .hero-section__content-wrap {
+    height: 460px;
+  }
+}
